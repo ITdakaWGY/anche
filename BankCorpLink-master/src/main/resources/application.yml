@@ -1,0 +1,72 @@
+server:
+  port: 10009
+
+logging:
+  level:
+    com.github.bluecatlee.bcm: debug
+
+# 机器id 部署多机时保证每个服务的机器id值不同
+machine:
+  id: 1
+
+bcm:
+  corp-no: ""  # 企业代码
+  user-no: ""  # 用户号
+  http:
+    host: 127.0.0.1
+    port: 8899
+  socket:
+    enabled: false
+    host: 127.0.0.1
+    port: 30010
+    timeout: 5000
+
+cib:
+  cid: "1100343164"
+  userid: "qw1"
+  userpass: "a1111111"
+  http:
+    host: 192.168.10.3
+    port: 8007
+
+
+#建行龙支付 建行无测试环境
+ccb:
+  #外联平台客户端配置
+  url: http://172.17.128.54:9996
+  custId:
+  posId:
+  branchId:
+  userId:
+  password:
+  publicKey:
+
+#建行数币
+dcep:
+  #下单url(仅下单用)
+  url: https://ch5.dcep.ccb.com/CCBIS/ccbMain_XM
+  #公钥(支付回调用)
+  publicKey:
+
+  #商户平台
+  custId:
+  posId:
+  branchId:
+  userId:
+  password:
+
+  #瓦片平台
+  ftCorpId:
+  ftTileId:
+  ftScenario:
+
+  #授权
+  auth:
+    #授权地址
+    url: https://staticfcc.ccbft.com/
+    #签名私钥
+    priKey1:
+    #加密公钥
+    pubKey1:
+    #解密公钥
+    pubKey2:
